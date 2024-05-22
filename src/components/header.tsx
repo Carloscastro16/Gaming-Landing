@@ -47,10 +47,9 @@ function ResponsiveAppBar() {
                 <Toolbar
                     disableGutters
                     color="primary.dark"
-                    sx={{ bgcolor: "primary.dark", my: 0, py: 0 }}
+                    sx={{ bgcolor: "primary.dark", my: 0, py: 0, zIndex: 999 }}
                 >
                     {/* Md Display */}
-                    <AdbIcon sx={{ display: { xs: "none", md: "flex", color: '#fff' }, mr: 1, ml: 2 }} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -99,7 +98,6 @@ function ResponsiveAppBar() {
                         </Menu>
                     </Box>
                     {/* XS Display */}
-                    <AdbIcon sx={{ display: { xs: "flex", md: "none", color: '#fff' }, mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap

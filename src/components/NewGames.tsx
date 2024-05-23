@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Virtual, Pagination, Autoplay, Navigation } from "swiper/modules";
+import { Virtual, Pagination, Navigation } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,7 +10,6 @@ import "swiper/css/navigation";
 import "../index.css";
 import { Box, Button, Stack, ThemeProvider, Typography } from "@mui/material";
 import { gamingTheme } from "../assets/themes";
-import Imagen from "../assets/images/img1.png";
 const games = [
     {
         index: 0,

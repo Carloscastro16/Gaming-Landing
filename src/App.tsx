@@ -2,12 +2,14 @@ import React from 'react';
 import './App.css';
 import ResponsiveAppBar from './components/header';
 import AppBanner from './components/Banner';
+import NewGames from './components/NewGames';
 function App() {
   return (
-    <React.Fragment>
+    <>
       <ResponsiveAppBar></ResponsiveAppBar>
       <AppBanner></AppBanner>
-    </React.Fragment>
+      <NewGames></NewGames>
+    </>
   );
 }
 

@@ -67,7 +67,7 @@ function AppBanner() {
                 <Swiper
                     modules={[Virtual, Pagination, Autoplay, EffectFade]}
                     spaceBetween={0}
-                    slidesPerView={1}
+                    slidesPerView={3}
                     onSlideChange={() => console.log('slide change')}
                     pagination={paginationBullets}
                     autoplay={true}
@@ -118,9 +118,9 @@ function AppBanner() {
                 </Swiper>
                 <div className="specialSwipper">
                     <img src={MainCircle} alt="main" className="mainCircle"></img>
-                    <img src={MainCircle} alt="main" className="firstCircle small-circle"></img>
-                    <img src={MainCircle} alt="main" className="secondCircle small-circle"></img>
-                    <img src={MainCircle} alt="main" className="thirdCircle small-circle"></img>
+                    <img src={Circle1} alt="main" className="firstCircle small-circle"></img>
+                    <img src={Circle2} alt="main" className="secondCircle small-circle"></img>
+                    <img src={Circle3} alt="main" className="thirdCircle small-circle"></img>
                 </div>
                 <div className="linear-deg"></div>
                 <CompaniesBanner></CompaniesBanner>

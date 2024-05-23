@@ -79,6 +79,7 @@ function NewGames() {
                     <div className="gamesLine"></div>
                 </Box>
                 <Swiper
+                    className="newGamesSwiper"
                     initialSlide={1}
                     spaceBetween={0}
                     slidesPerView={1.5}

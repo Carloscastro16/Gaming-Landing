@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 import '../index.css';
-import { Box, Stack, ThemeProvider, Typography } from "@mui/material";
+import { Box, Button, Stack, ThemeProvider, Typography } from "@mui/material";
 import { gamingTheme } from "../assets/themes";
 import Imagen from '../assets/images/img1.png'; 
 import MainCircle from '../assets/images/mainCircle.png'; 
@@ -89,26 +89,45 @@ function AppBanner() {
                                     <Typography sx={{ 
                                         color: 'primary.main',
                                         fontWeight: 'bold',
-                                        fontSize: '64px', 
-                                        lineHeight: 'normal'
+                                        fontFamily: 'Montserrat',
+                                        fontSize: { xs: '32px', sm: '38px', md: '40px', lg: '64px'}, 
+                                        lineHeight: 'normal',
+                                        maxWidth: { xs: '100vw', sm: '60vw', md: '60vw', lg: '50vw', xl: '70vw'}
                                         }}>
                                         {game.name}
                                     </Typography>
                                     <Typography sx={{ 
                                         color: 'white',
-                                        fontWeight: 'light',
-                                        fontSize: '2rem',
-                                        letterSpacing: '16%',
+                                        fontFamily: 'Roboto',
+                                        fontWeight: '100',
+                                        fontSize: { xs: '26px', md: '26px', lg: '36px'},
+                                        letterSpacing: '6px',
                                         }}>
                                         {game.genre}
                                     </Typography>
                                     <Typography sx={{ 
                                         color: 'white',
-                                        fontWeight: 'normal',
-                                        fontSize: '1rem', 
+                                        fontFamily: 'Roboto',
+                                        fontWeight: '400',
+                                        fontSize: { xs: '10px', md: '12px', lg: '16px'}, 
                                         }}>
                                         {game.desc}
                                     </Typography>
+                                    <Button
+                                            sx={{
+                                                width: 'fit-content',
+                                                py: {xs: "6px", lg: "10px"},
+                                                px: {xs: "12px", md: "12px", lg: "16px"},
+                                                backgroundColor: "#9C0461",
+                                                color: "white",
+                                                borderRadius: "4px",
+                                                fontSize: {xs: "10px", md: "12px", lg: "16px"},
+                                                mb: "20px",
+                                                mt: "18px"
+                                            }}
+                                        >
+                                            Purchase now
+                                    </Button>
                                 </Stack>
                             </Box>
                         </SwiperSlide>

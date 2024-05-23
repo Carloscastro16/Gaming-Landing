@@ -33,6 +33,7 @@ code {
   justify-content: center;
   gap: 10px;
   margin-top: 36px;
+  padding-bottom: 52px;
 }
 
 .swiper-pagination-bullet {
@@ -56,6 +57,7 @@ code {
   z-index: -4;
 }
 
+/* Companies Styles */
 .linear-deg {
   position: absolute;
   top: 0;
@@ -70,12 +72,26 @@ code {
   width: 100%;
   margin-top: 79px;
   margin-bottom: 79px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1;
 }
+.company-item {
+  height: 100%;
+}
+/* Companies Media Styles */
 
+
+/* @media (max-width: 768px) {
+  .company-item {
+    width: fit-content;
+    transform: scale(0.512);
+  }
+}
+@media (max-width: 600px) {
+  .company-item {
+    width: fit-content;
+    transform: scale(0.396);
+  }
+} */
 /* .swiper-pagination-bullet-active {
 	background: var(--primary) !important;
 } */
@@ -88,6 +104,7 @@ code {
   z-index: 3;
 }
 
+/* Especial Swiper Styles */
 .mainCircle {
   width: 733px;
   position: absolute;
@@ -116,6 +133,41 @@ code {
   top: 655px;
   right: 407px;
 }
+/* Especial Swiper Media Styles */
+
+@media (max-width: 600px) {
+  .mainCircle{
+    display: none;
+  }
+  .small-circle {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .mainCircle{
+    top: 80px;
+    left: 400px;
+    width: 600px;
+  }
+  .small-circle {
+    width: 80px;
+  }
+  .firstCircle {
+    top: 543px;
+    right: 254px;
+  }
+  
+  .secondCircle {
+    top: 620px;
+    right: 152px;
+  }
+  
+  .thirdCircle {
+    top: 653px;
+    right: 24px;
+  }
+}
+
 
 
 /* NewGames Styles */
@@ -135,4 +187,33 @@ code {
   .gamesLine{
     display: none;
   }
+}
+
+/* Swiper Arrows Styles */
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: "" !important;
+}
+.swiper-button-prev {
+  background-image: url('./assets/icons/prevArrow.png');
+  background-size: cover;
+  background-position: left center;
+}
+
+.swiper-button-next {
+  background-image: url('./assets/icons/nextArrow.png');
+  background-size: cover;
+  background-position: right center;
+}
+
+.newGamesSwiper .swiper-button-prev {
+  margin-top: -80px;
+}
+
+.newGamesSwiper .swiper-button-next {
+  margin-top: -80px;
+}
+
+/* Categories Styles */
+.CategoriesSwiper{
+  margin-bottom: 42px;
 }

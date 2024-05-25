@@ -10,29 +10,33 @@ import "swiper/css/navigation";
 import "../index.css";
 import { Box, Button, Stack, ThemeProvider, Typography } from "@mui/material";
 import { gamingTheme } from "../assets/themes";
+import Img1 from '../assets/images/beyond.png'
+import Img2 from '../assets/images/iratus.png'
+import Img3 from '../assets/images/lastofus.png'
+
 const games = [
     {
         index: 0,
         name: "The last of Us: Part 1",
-        img: "../assets/images/img1.png",
+        img: Img3,
         price: 47.99,
     },
     {
         index: 1,
         name: "Iratus Lord of the Dead",
-        img: "../assets/images/img1.png",
+        img: Img2,
         price: 47.99,
     },
     {
         index: 2,
         name: "Beyond: Two Souls",
-        img: "../assets/images/img1.png",
+        img: Img1,
         price: 47.99,
     },
     {
         index: 4,
         name: "The last of Us: Part 1",
-        img: "../assets/images/img1.png",
+        img: Img3,
         price: 47.99,
     },
 ];
@@ -112,17 +116,27 @@ function NewGames() {
                         >
                             <Box
                                 sx={{
+                                    position: 'relative',
                                     width: {xs: "210px", md: "330px", lg: "330px"},
                                     height: "100%",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
+                                    flexDirection: "column",
                                     px: "15px",
                                     py: "15px",
                                     backgroundColor: "#1B2868",
                                     borderRadius: "10px",
+                                    gap: "20px"
                                 }}
                             >
+                                <Box sx={{
+                                    width: '100%',
+                                    height: { xs: '115px', sm: '145.54px', lg: '156px' },
+                                    borderRadius: '10px',
+                                }}>
+                                    <img className="newGamesImg" src={game.img} alt="" width={'100%'} height={'100%'}/>
+                                </Box>
                                 <Stack
                                     direction={"column"}
                                     gap={"20px"}

@@ -11,11 +11,15 @@ import { Box, Button, Stack, ThemeProvider, Typography } from "@mui/material";
 import { gamingTheme } from "../assets/themes";
 import Imagen1 from '../assets/images/img1.png'; 
 import Imagen2 from '../assets/images/img2.png'; 
-import Imagen3 from '../assets/images/img3.png'; 
+import Imagen3 from '../assets/images/jedifallen.png'; 
+import Imagen4 from '../assets/images/img3.png'; 
 import MainCircle from '../assets/images/mainCircle.png'; 
 import Circle1 from '../assets/images/circle1.png'; 
 import Circle2 from '../assets/images/circle2.png'; 
 import Circle3 from '../assets/images/circle3.png'; 
+import Circle5 from '../assets/images/jedi1.png'
+import Circle6 from '../assets/images/jedi2.png'
+import Circle7 from '../assets/images/jedi3.png'
 import CompaniesBanner from "./companiesSwiper";
 const games = [
     {
@@ -28,7 +32,7 @@ const games = [
     },
     {
         index: 1,
-        name: 'FarCry 5',
+        name: 'God Of War',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipis',
         genre: 'Action',
         bg: Imagen2,
@@ -40,14 +44,14 @@ const games = [
         desc: 'Lorem ipsum dolor sit amet, consectetur adipis',
         genre: 'Action',
         bg: Imagen3,
-        imgs: [Circle1, Circle2, Circle3]
+        imgs: [Circle5, Circle6, Circle7]
     },
     {
         index: 3,
-        name: 'STAR WARS: Survivor',
+        name: 'Uncharted 5',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipis',
         genre: 'Action',
-        bg: Imagen1,
+        bg: Imagen4,
         imgs: [Circle1, Circle2, Circle3]
     },
 ]
@@ -59,9 +63,6 @@ const paginationBullets = {
         return '<span class="' + className + '"></span>';
     }
   };
-/* const bgImage = (index: any) =>{
-    
-} */
 function AppBanner() {
     const [mainImage, setMainImage] = useState(MainCircle);
 
@@ -102,7 +103,7 @@ function AppBanner() {
                                         fontFamily: 'Montserrat',
                                         fontSize: { xs: '32px', sm: '38px', md: '40px', lg: '64px'}, 
                                         lineHeight: 'normal',
-                                        maxWidth: { xs: '100vw', sm: '60vw', md: '60vw', lg: '50vw', xl: '70vw'},
+                                        maxWidth: { xs: '100vw', sm: '60vw', md: '46vw', lg: '42vw', xl: '70vw'},
                                         zIndex: 4
                                         }}>
                                         {game.name}

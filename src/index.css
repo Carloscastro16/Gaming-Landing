@@ -22,6 +22,7 @@ code {
 }
 
 .swiper-custom-pagination {
+  position: relative;
   margin-left: 40px;
   z-index: 5;
 }
@@ -67,7 +68,7 @@ code {
   left: 0;
   width: 100%;
   height: 120vh;
-  background: linear-gradient(180deg, rgba(110,110,110,0) 0%, rgba(0,0,0,1) 77%, rgba(0,0,0,0.7273109927564776) 90%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(180deg, rgba(110,110,110,0) 0%, rgba(0,0,0,1) 64%, rgba(0,0,0,0.7273109927564776) 90%, rgba(0,0,0,0) 100%);
   z-index: 1;
 }
 .linear-deg-companies {
@@ -119,32 +120,38 @@ code {
 
 /* Especial Swiper Styles */
 .mainCircle {
-  width: 733px;
+  width: 685px;
+  height: 685px;
   position: absolute;
-  top: -10px;
-  right: -40px;
+  top: -84px;
+  right: -80px;
   border: 8px solid #7d96fc5e;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .small-circle {
   position: absolute;
   width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
 }
 
 .firstCircle {
-  top: 392px;
-  right: 630px;
+  top: 353px;
+  right: 525px;
 }
 
 .secondCircle {
-  top: 549px;
-  right: 549px;
+  top: 487px;
+  right: 415px;
 }
 
 .thirdCircle {
-  top: 655px;
-  right: 407px;
+  top: 551px;
+  right: 236px;
 }
 /* Especial Swiper Media Styles */
 
@@ -158,25 +165,27 @@ code {
 }
 @media (max-width: 768px) {
   .mainCircle{
-    top: 80px;
+    top: 40px;
     left: 400px;
     width: 600px;
+    height: 600px;
   }
   .small-circle {
     width: 80px;
+    height: 80px;
   }
   .firstCircle {
-    top: 543px;
+    top: 503px;
     right: 254px;
   }
   
   .secondCircle {
-    top: 620px;
+    top: 578px;
     right: 152px;
   }
   
   .thirdCircle {
-    top: 653px;
+    top: 616px;
     right: 24px;
   }
 }

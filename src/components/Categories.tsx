@@ -126,9 +126,10 @@ function Categories() {
                                     px: "15px",
                                     py: "15px",
                                     borderRadius: "10px",
+                                    position: "relative"
                                 }}
                             >
-                                <img src={game.img} className="bannerBg" alt="bannerBg"/>
+                                <img src={game.img} className="categoriesImg" alt="bannerBg"/>
                                 <Typography
                                     sx={{
                                         color: "white",

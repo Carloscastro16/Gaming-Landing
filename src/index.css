@@ -15,9 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #0B122F;
 }
-body, html{
-  overflow-x: hidden;
-}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -25,6 +23,7 @@ code {
 
 .swiper-custom-pagination {
   margin-left: 40px;
+  z-index: 5;
 }
 .swiper-custom-pagination-newgames{
   width: 100%;
@@ -41,12 +40,15 @@ code {
   height: 8px !important;
   width: 35px !important;
   border-radius: 10px !important;
+  z-index: 5;
 }
 
 .bannerSlide {
   position: relative;
 }
-
+.bannerSwiper{
+  z-index: 2 !important;
+}
 .bannerBg {
   object-fit: cover;
   position: absolute;
@@ -57,6 +59,7 @@ code {
   z-index: -4;
 }
 
+
 /* Companies Styles */
 .linear-deg {
   position: absolute;
@@ -65,6 +68,16 @@ code {
   width: 100%;
   height: 120vh;
   background: linear-gradient(180deg, rgba(110,110,110,0) 0%, rgba(0,0,0,1) 77%, rgba(0,0,0,0.7273109927564776) 90%, rgba(0,0,0,0) 100%);
+  z-index: 1;
+}
+.linear-deg-companies {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  background: linear-gradient(180deg, rgba(110, 110, 110, 0) 0%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
 }
 
 .companies {

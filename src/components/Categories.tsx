@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Virtual, Pagination, Navigation } from "swiper/modules";
+import { Virtual, Pagination, Navigation, EffectCoverflow } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -8,33 +8,38 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../index.css";
-import { Box, Stack, ThemeProvider, Typography } from "@mui/material";
+import { Box, ThemeProvider, Typography } from "@mui/material";
 import { gamingTheme } from "../assets/themes";
+import ftp from '../assets/images/ftp.png'
+import rpg from '../assets/images/rpg.png'
+import action from '../assets/images/action.png'
+import anime from '../assets/images/anime.png'
+import coop from '../assets/images/coop.png'
 const games = [
     {
         index: 0,
         name: "RPG",
-        img: "../assets/images/img1.png"
+        img: rpg
     },
     {
         index: 1,
         name: "Action",
-        img: "../assets/images/img1.png"
+        img: action
     },
     {
         index: 2,
         name: "Free-to-play",
-        img: "../assets/images/img1.png"
+        img: ftp
     },
     {
         index: 4,
         name: "Anime",
-        img: "../assets/images/img1.png"
+        img: anime
     },
     {
         index: 5,
         name: "Co-Op",
-        img: "../assets/images/img1.png"
+        img: coop
     },
 ];
 
@@ -81,7 +86,15 @@ function Categories() {
                     navigation={true}
                     centeredSlides={true}
                     virtual
-                    modules={[Virtual, Pagination, Navigation]}
+                    modules={[Virtual, Pagination, Navigation, EffectCoverflow]}
+                    effect="coverflow"
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 150,
+                        modifier: 1,
+                        slideShadows: true
+                      }}
                     breakpoints={{
                         640: {
                             slidesPerView: 2.1,
@@ -92,8 +105,8 @@ function Categories() {
                             spaceBetween: 10,
                         },
                         1024: {
-                            slidesPerView: 5,
-                            spaceBetween: 20,
+                            slidesPerView: 4.6,
+                            spaceBetween: 0,
                         },
                     }}
                 >
@@ -112,10 +125,10 @@ function Categories() {
                                     justifyContent: "center",
                                     px: "15px",
                                     py: "15px",
-                                    backgroundColor: "#1B2868",
                                     borderRadius: "10px",
                                 }}
                             >
+                                <img src={game.img} className="bannerBg" alt="bannerBg"/>
                                 <Typography
                                     sx={{
                                         color: "white",

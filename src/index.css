@@ -189,9 +189,29 @@ code {
     right: 24px;
   }
 }
+/* NewlyGames Styles */
+.gamesType .active{
+  background-color: #FA2C3B;
+}
+.deg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #0B122F 0%, rgba(1,0,23,0.7497373949579832) 33%, rgba(0,0,0,0) 100%);
+  
+}
+.NewlyGamesImg{
+  object-fit: cover;
+}
 
+.NewlyCardsImg{
+  border-radius: 10px;
+  object-fit: cover;
+}
 
-
+.NewlyCard.active{
+  background: #FFFFFF5e;
+}
 /* NewGames Styles */
 .newGamesImg{
   object-fit: cover;

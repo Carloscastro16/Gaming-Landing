@@ -150,7 +150,7 @@ function NewlyGames() {
                                     padding: '10px',
                                     borderRadius: '10px',
                                     cursor: 'pointer'
-                                }} onClick={() => handleClickOnCard(game)}>
+                                }} onClick={() => handleClickOnCard(game)} key={game.index}>
                                     <Box sx={{ 
                                         width:{xs:'80px', sm: '183px', lg: '205px'},
                                         height: {xs:'45px', sm: '102px', lg: '120px'},

@@ -59,7 +59,7 @@ function Categories() {
                         alignItems: "center",
                         justifyContent: "center",
                         gap: "30px",
-                        mt: "130px",
+                        mt: { xs:'32px', sm:'70px' ,lg:"100px"},
                         mb: "54px"
                     }}
                 >
@@ -93,7 +93,7 @@ function Categories() {
                         stretch: 0,
                         depth: 150,
                         modifier: 1,
-                        slideShadows: true
+                        slideShadows: false
                       }}
                     breakpoints={{
                         640: {

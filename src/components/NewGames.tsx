@@ -39,6 +39,12 @@ const games = [
         img: Img3,
         price: 47.99,
     },
+    {
+        index: 5,
+        name: "The last of Us: Part 2",
+        img: Img3,
+        price: 47.99,
+    },
 ];
 
 const paginationBullets = {
@@ -84,7 +90,7 @@ function NewGames() {
                 </Box>
                 <Swiper
                     className="newGamesSwiper"
-                    initialSlide={1}
+                    initialSlide={2}
                     spaceBetween={0}
                     slidesPerView={1.5}
                     onSlideChange={() => console.log("slide change")}

@@ -36,7 +36,7 @@ const games = [
         desc: 'Lorem ipsum dolor sit amet, consectetur adipis',
         genre: 'Action',
         bg: Imagen2,
-        imgs: [Circle1, Circle2, Circle3]
+        imgs: [Circle5, Circle2, Circle7]
     },
     {
         index: 2,
@@ -52,7 +52,7 @@ const games = [
         desc: 'Lorem ipsum dolor sit amet, consectetur adipis',
         genre: 'Action',
         bg: Imagen4,
-        imgs: [Circle1, Circle2, Circle3]
+        imgs: [Circle1, Circle7, Circle5]
     },
 ]
 

@@ -9,21 +9,24 @@ const games = [
         nameIndex: 'Card1',
         name: "Elden Ring",
         img: img1,
-        desc: 'THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.'
+        desc: 'THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.',
+        plarform: 'All'
     },
     {
         index: 1,
         nameIndex: 'Card2',
         name: "NFS Inbound",
         img: nfs,
-        desc: 'Lorem ipsum dolor sit amet, consectetur adip sequ incididunt et justo'
+        desc: 'Lorem ipsum dolor sit amet, consectetur adip sequ incididunt et justo',
+        plarform: 'All'
     },
     {
         index: 2,
         nameIndex: 'Card3',
         name: "Fifa 23",
         img: fifa,
-        desc: 'Lorem ipsum dolor sit amet, consectetur adip sequ incididunt et justo'
+        desc: 'Lorem ipsum dolor sit amet, consectetur adip sequ incididunt et justo',
+        plarform: 'All'
     }
 ];
 
@@ -31,6 +34,7 @@ function NewlyGames() {
     const [activeButton, setActiveButton] = useState('button1');
     const [activeCard, setActiveCard] = useState('Card1');
     const [activeMainCard, setActiveMainCard] = useState(games[0]);
+    const [activePlatform, setActivePlatform] = useState('');
     const handleClick = (buttonKey: any) => {
         setActiveButton(buttonKey);
     };

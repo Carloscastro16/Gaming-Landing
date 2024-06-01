@@ -306,3 +306,6 @@ code {
   z-index: -4;
   border-radius: 10px;
 }
+.MuiDataGrid-columnHeader {
+  background: #9C0461 !important; 
+}

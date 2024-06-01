@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Virtual, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 
@@ -21,6 +21,8 @@ import Circle5 from '../assets/images/jedi1.png'
 import Circle6 from '../assets/images/jedi2.png'
 import Circle7 from '../assets/images/jedi3.png'
 import CompaniesBanner from "./companiesSwiper";
+import ModalRegistro from "./ModalRegistro";
+import axios from "axios";
 const games = [
     {
         index: 0,
@@ -65,11 +67,32 @@ const paginationBullets = {
   };
 function AppBanner() {
     const [mainImage, setMainImage] = useState(MainCircle);
+    const [openModal, setOpenModal] = useState(false);
+    const [info, setInfo] = useState([{}]);
 
+    useEffect(()=>{
+        if(openModal === false){
+            resetData();
+        }else{
+            getTestData();
+        }
+    }, [openModal])
     const handleCircleClick = (image: string) => {
         setMainImage(image);
     };
-
+    function resetData(){
+        setInfo([{}]);
+    }
+    const getTestData = async () => {
+        try {
+            const response = await axios.get('https://fakestoreapi.com/products');
+            const data = response.data;
+            console.log(data);
+            setInfo(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
     return (
         <React.Fragment>
             <ThemeProvider theme={gamingTheme}>
@@ -140,6 +163,7 @@ function AppBanner() {
                                                 mt: "18px",
                                                 zIndex: 4
                                             }}
+                                            onClick={() => setOpenModal(true)}
                                         >
                                             Purchase now
                                     </Button>
@@ -158,6 +182,9 @@ function AppBanner() {
                 
                 </Swiper>
                 <div className="linear-deg-companies"></div>
+                <ModalRegistro openModal={openModal}
+                    setOpenModal={setOpenModal} 
+                    data={info}/>
                 <CompaniesBanner></CompaniesBanner>
             </ThemeProvider>
         </React.Fragment>
